@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log*
+.DS_Store
+.env
+.env.local
+
+# Personal, machine specific agent notes that should never be shared with the team.
+CLAUDE.local.md
+.claude/settings.local.json
