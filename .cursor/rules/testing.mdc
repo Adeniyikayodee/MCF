@@ -1,0 +1,15 @@
+---
+description: Test conventions for this repository
+globs: ["tests/**/*.js"]
+alwaysApply: false
+---
+
+This rule is hand written rather than generated, because glob scoping is something Cursor offers
+that the shared AGENTS.md format cannot express, and it only loads when you are editing a test.
+
+- The runner is `node --test`, so never import from jest, vitest, mocha, or chai.
+- Assertions come from `node:assert/strict` and tests come from `node:test`.
+- Any file that creates tasks must call `resetTasks()` in a `beforeEach` hook, because the store in
+  `src/services/tasks.js` is module level state that survives between cases.
+- Call `route()` from `src/router.js` directly instead of starting a server, so a case can assert
+  on the status and the payload in one object.
