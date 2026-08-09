@@ -41,9 +41,9 @@ mention is real, and that the generated files still match `AGENTS.md`.
 context lint
 
   token budgets
-    AGENTS.md                          ~ 444 tokens / 800  ok
+    AGENTS.md                          ~ 452 tokens / 800  ok
     CLAUDE.md                          ~ 133 tokens / 300  ok
-    .github/copilot-instructions.md    ~ 466 tokens / 900  ok
+    .github/copilot-instructions.md    ~ 474 tokens / 900  ok
     src/AGENTS.md                      ~ 169 tokens / 400  ok
 ```
 
