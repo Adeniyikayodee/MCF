@@ -4,10 +4,14 @@ Tests run on the Node built in test runner, so there is no framework to install 
 configuration file to maintain.
 
 ```bash
-npm test                                  # everything
-node --test tests/api.test.js             # one file
-node --test --test-name-pattern="filter"  # one case by name
+npm test                                               # everything
+node --test tests/api.test.js                          # one file
+node --test tests/*.test.js --test-name-pattern=filter # one case by name
 ```
+
+The npm script passes the test files as a shell expanded glob rather than as a `**` pattern,
+because pattern matching inside `node --test` only arrived in Node 22 and this project supports
+Node 20.
 
 ## How the tests are organised
 
