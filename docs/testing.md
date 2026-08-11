@@ -6,7 +6,7 @@ configuration file to maintain.
 ```bash
 npm test                                               # everything
 node --test tests/api.test.js                          # one file
-node --test tests/*.test.js --test-name-pattern=filter # one case by name
+node --test --test-name-pattern=filter tests/*.test.js # cases matching a name
 ```
 
 The npm script passes the test files as a shell expanded glob rather than as a `**` pattern,
